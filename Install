@@ -1,0 +1,64 @@
+INSTALL
+
+1) curl -sSL https://get.haskellstack.org/ | sh
+
+2) git clone https://github.com/romefeller/yesodvazio.git
+2.1) stack pra ver se funcionou
+
+3) entrar na pasta criada SEMPRE NA PASTAAAAAAAAAAAAAAAAAAAAAAAA NUNCA FORAAAA
+
+4) stack install
+
+5) paciência...
+
+6) completed 32 actions(s)
+
+ stack build compila o site
+ 
+ como sabe: vai aparecer linking
+ 
+ stack exec aulahaskell
+ 
+ preview running app
+ 
+ julius é js
+ 
+ whamlet é html
+ 
+ lucius css
+ 
+ cassius tbm é css
+ 
+ cabal linha 83 mudar nome 
+ stack exec nome do projeto (aulahaskell)
+ 
+ cd static
+ cd imgs
+ wget link
+ 
+ cd..
+ stack clean
+ 
+ --favicon no config 
+ robots.txt no config
+ 
+ HEROKU
+
+Host
+ ec2-54-235-167-210.compute-1.amazonaws.com
+Database
+ d8pc3r8cp4ahl
+User
+ fqfahymbhnhepd
+Port
+ 5432
+Password
+ fdec358585602102f71ff43557735ed5b8668e30b149f8999ce04452a0a2abbc
+URI
+ postgres://fqfahymbhnhepd:fdec358585602102f71ff43557735ed5b8668e30b149f8999ce04452a0a2abbc@ec2-54-235-167-210.compute-1.amazonaws.com:5432/d8pc3r8cp4ahl
+Heroku CLI
+ heroku pg:psql postgresql-convex-34110 --app aulahaskell123
+ 
+BD
+
+select * from Livro;
