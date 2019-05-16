@@ -1,0 +1,22 @@
+PARA TODA NOVA TABELA:
+
+0) COLOCAR EM Foundation.hs (UMA VEZ SOH)
+type Form a = Html -> MForm Handler (FormResult a, Widget)
+
+
+OBS: N ESQUECER DE COLOCAR O BD DO HEROKU NO ARQUIVO
+config/settings.yml. COLOCAR ENTRE O : e A "
+
+1) Modelar banco no arquivo Models
+
+2) Criar rota
+
+3) Criar um novo arquivo (Cliente.hs) na pasta
+Handler e import em Application.hs
+por exemplo:
+
+import Handler.Cliente
+
+Se a tabela for Cliente.
+
+4) Programação

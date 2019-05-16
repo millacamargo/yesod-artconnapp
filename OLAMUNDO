@@ -1,0 +1,25 @@
+0) COMO SABER SE DEU CERTO?
+
+ERRO NO ULTIMO PASSO
+
+Failed to load interface for ‘Network.Http.Types’
+
+1) APAGAR A LINHA:
+
+import Network.Http.Types
+
+do arquivo src/Handler/Home.hs
+
+2) INCLUIR LINHA
+
+{-# LANGUAGE QuasiQuotes #-}
+
+antes da palavra module 
+
+3) APAGAR O CENTUDO DO ARQUIVO
+configo/models
+
+4) programar...
+
+5) build
+
