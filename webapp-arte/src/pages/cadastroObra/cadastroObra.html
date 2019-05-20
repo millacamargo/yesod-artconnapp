@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="dark">
+  	<ion-buttons start>
+  		<button ion-button icon-only menuToggle>
+  			<ion-icon name="menu"></ion-icon>
+  		</button>
+  	</ion-buttons>
+	<ion-title>Logo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+		
+<!-- CADASTRAR OBRA -->
+<section class="contact" id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title st-center">
+							<h3>Cadastre sua Obra</h3>
+							<p>Comece a divulgar seus projetos artísticos agora mesmo!</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<form class="contact-form" role="form">
+							<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título da Obra">
+							<input type="text" class="form-control" id="genero" name="genero" placeholder="Genero: literário, pintura, música, etc.">
+							<input type="date" class="form-control" id="dtcriacao" name="dtcriacao" placeholder="Data de criação">
+							<label for="imgObra" class="imgObra">Imagem da Obra</label>
+							<input type="file" class="form-control-file" id="imgObra">
+							<button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Cadastrar</button>
+						</form>
+						<div id="result-message" role="alert"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						&copy; <a href="http://millacamargo.com" target="_blank">Camila Azevedo Camargo</a> 
+						
+						e <a href="https://www.linkedin.com/in/vasconcellosluis" target="_blank">Luis Felipe Santos Vasconcellos</a>, 2019.
+						
+					</div>
+				</div>
+			</div>
+		</footer>
+</ion-content>
