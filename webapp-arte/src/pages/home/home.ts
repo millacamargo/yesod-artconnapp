@@ -12,7 +12,7 @@ export class HomePage {
   
   }
   goToLogin(){
-    this.navCtrl.push(Login);
+    this.navCtrl.setRoot(Login);
   }
 
 }
