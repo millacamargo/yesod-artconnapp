@@ -6,6 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { Cadastro } from '../pages/cadastro/cadastro';
 import { Login } from '../pages/login/login';
+import { CadastroObra } from '../pages/cadastroObra/cadastroObra';
+import { HomeUser } from '../pages/homeUser/homeUser';
 
 @Component({
   templateUrl: 'app.html'
@@ -20,7 +22,9 @@ export class MyApp {
   this.pages = [
       {title: 'Home', component: HomePage},
       {title: 'Cadastro', component: Cadastro},
-      {title: 'Login', component: Login}
+      {title: 'Login', component: Login},
+      {title: 'Cadastre seu Obra', component: CadastroObra},
+      {title: 'Ver Obras', component: HomeUser}
     ];
     this.activePage = this.pages[0];
   

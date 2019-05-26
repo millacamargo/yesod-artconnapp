@@ -8,13 +8,17 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Cadastro } from '../pages/cadastro/cadastro';
 import { Login } from '../pages/login/login';
+import { CadastroObra } from '../pages/cadastroObra/cadastroObra';
+import { HomeUser } from '../pages/homeUser/homeUser';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     Cadastro,
-    Login
+    Login,
+    CadastroObra,
+    HomeUser
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,9 @@ import { Login } from '../pages/login/login';
     MyApp,
     HomePage,
     Cadastro,
-    Login
+    Login,
+    CadastroObra,
+    HomeUser
   ],
   providers: [
     StatusBar,
