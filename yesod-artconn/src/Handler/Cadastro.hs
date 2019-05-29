@@ -4,12 +4,13 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE QuasiQuotes #-}
-module Handler.Home where
+module Handler.Cadastro where
 
 import Import
 import Database.Persist.Postgresql
 
-getHomeR :: Handler Html
-getHomeR = undefined
-
-
+postCadastroR :: Handler TypedContent
+postCadastroR = do
+    cadastro <- requireJsonBody :: Handler Cadastro
+    cid <- runDB $ insert cadastro
+    sendStatusJSON created201 (object ["resp" .= cid])

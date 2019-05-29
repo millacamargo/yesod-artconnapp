@@ -3,4 +3,10 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/ HomeR GET 
+/ HomeR 
+/obra/#ObraId/ HomeUserR PUT DELETE GET
+/cadastro CadastroR POST
+/obras CadastroObraR POST GET
+/arquivo/#ObraId ArquivoR   GET POST
+
+-- https://app-arte-camilacamargo98.c9users.io/
