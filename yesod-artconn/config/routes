@@ -4,9 +4,9 @@
 /robots.txt RobotsR GET
 
 / HomeR 
-/obra/#ObraId/ HomeUserR PUT DELETE GET
-/cadastro CadastroR POST
-/obras CadastroObraR POST GET
-/arquivo/#ObraId ArquivoR   GET POST
+/obra HomeUserR OPTIONS GET
+/cadastro/#ObrasId CadastroR OPTIONS PUT DELETE GET POST
+/obras CadastroObraR OPTIONS POST GET
+/arquivo/#ObrasId ArquivoR  OPTIONS GET POST
 
 -- https://app-arte-camilacamargo98.c9users.io/

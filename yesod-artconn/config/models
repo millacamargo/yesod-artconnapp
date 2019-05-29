@@ -1,14 +1,14 @@
-Cadastro json
+Usuarios json
     nome Text
     email Text
     celular Text
     senha Text
     
-CadastroObra json
+Obras json
     titulo Text
     genero Text
     data Date
-    usuario CadastroId
+    usuario UsuariosId
    
 
 

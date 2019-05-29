@@ -8,6 +8,11 @@ module Handler.Arquivo where
 
 import Import
 import Database.Persist.Postgresql
+import Network.HTTP.Types
+import Funcs
+
+optionsArquivoR :: Handler ()
+optionsArquivoR = headers
 -- Field Settings deixa vc setar atributos em uma tag input.
 -- Nesse caso, queremos soh jpg
 -- FileInfo eh o tipo Arquivo.
