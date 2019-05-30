@@ -61,4 +61,8 @@ Heroku CLI
  
 BD
 
-select * from Livro;
+select * from Generos;
+Inserir no BD 
+INSERT INTO Generos(id, genero) VALUES (1, 'Literário');
+INSERT INTO Obras(id, titulo, genero_Id, dia, usuario_Id) VALUES (1, 'O Rei de Roma', 1, '2019-05-30', 1); 
+INSERT INTO Usuarios(id, nome, email, celular, senha) VALUES (1, 'Luis Felipe', 'lfelipevasconcellos@hotmail.com', '13981969531', 'F0finhoPret@');

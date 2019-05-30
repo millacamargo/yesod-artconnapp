@@ -11,14 +11,14 @@ import Import
 import Database.Persist.Postgresql
 import Handler.Funcs
 
-optionsCadastroObraR :: ObrasId -> Handler ()
-optionsCadastroObraR _ = headers
+optionsObraR :: ObrasId -> Handler ()
+optionsObraR _ = headers
 
-optionsCadastrodeObraR :: Handler ()
-optionsCadastrodeObraR = headers
+optionsCadastroObraR :: Handler ()
+optionsCadastroObraR = headers
 
-postCadastrodeObraR :: Handler TypedContent
-postCadastrodeObraR = do
+postCadastroObraR :: Handler TypedContent
+postCadastroObraR = do
     obra <- requireJsonBody :: Handler Obras
     oid <- runDB $ insert obra
     sendStatusJSON created201 (object ["resp" .= oid])
@@ -32,8 +32,8 @@ instance ToJSON ObraGenero where
         ]
 -- (object ["obra" .= obra, genero])
 
-getCadastroObraR :: ObrasId -> Handler TypedContent
-getCadastroObraR oid = do 
+getObraR :: ObrasId -> Handler TypedContent
+getObraR oid = do 
     obra <- runDB $ get404 oid
     -- entityVal entityKey
     --let obraId = fmap (obrasGeneroId.entityVal) obra
@@ -42,14 +42,14 @@ getCadastroObraR oid = do
     putStrLn $ (pack.show) obra
     sendStatusJSON ok200 $ obra
     
-deleteCadastroObraR :: ObrasId -> Handler TypedContent
-deleteCadastroObraR oid = do 
+deleteObraR :: ObrasId -> Handler TypedContent
+deleteObraR oid = do 
     _ <- runDB $ get404 oid
     runDB $ delete oid
     sendStatusJSON noContent204 (object [])
 
-putCadastroObraR :: ObrasId -> Handler TypedContent
-putCadastroObraR oid = do 
+putObraR :: ObrasId -> Handler TypedContent
+putObraR oid = do 
     novaObra <- requireJsonBody :: Handler Obras
     runDB $ replace oid novaObra
     sendStatusJSON noContent204 (object [])
