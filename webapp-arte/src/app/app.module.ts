@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { Cadastro } from '../pages/cadastro/cadastro';
 import { Login } from '../pages/login/login';
 import { CadastroObra } from '../pages/cadastroObra/cadastroObra';
-import { HomeUser } from '../pages/homeUser/homeUser';
+import { Obras } from '../pages/obras/obras';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { HomeUser } from '../pages/homeUser/homeUser';
     Cadastro,
     Login,
     CadastroObra,
-    HomeUser
+    Obras
   ],
   imports: [
     BrowserModule,
@@ -31,7 +31,7 @@ import { HomeUser } from '../pages/homeUser/homeUser';
     Cadastro,
     Login,
     CadastroObra,
-    HomeUser
+    Obras
   ],
   providers: [
     StatusBar,

@@ -7,7 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { Cadastro } from '../pages/cadastro/cadastro';
 import { Login } from '../pages/login/login';
 import { CadastroObra } from '../pages/cadastroObra/cadastroObra';
-import { HomeUser } from '../pages/homeUser/homeUser';
+import { Obras } from '../pages/obras/obras';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +24,7 @@ export class MyApp {
       {title: 'Cadastro', component: Cadastro},
       {title: 'Login', component: Login},
       {title: 'Cadastre seu Obra', component: CadastroObra},
-      {title: 'Ver Obras', component: HomeUser}
+      {title: 'Obras', component: Obras}
     ];
     this.activePage = this.pages[0];
   

@@ -2,11 +2,11 @@
 
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
-
-/ HomeR 
-/obra HomeUserR OPTIONS GET
-/cadastro/#ObrasId CadastroR OPTIONS PUT DELETE GET POST
-/obras CadastroObraR OPTIONS POST GET
+ 
+/obras ObrasR OPTIONS GET
+/cadastro UsuarioR OPTIONS POST
+/obra/#ObrasId CadastroObraR OPTIONS GET PUT DELETE
+/obra CadastrodeObraR OPTIONS POST
 /arquivo/#ObrasId ArquivoR  OPTIONS GET POST
 
 -- https://app-arte-camilacamargo98.c9users.io/

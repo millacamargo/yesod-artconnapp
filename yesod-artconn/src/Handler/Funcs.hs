@@ -1,7 +1,11 @@
-module Funcs where
-
-import Yesod
-import Foundation
+{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE QuasiQuotes #-}
+module Handler.Funcs where
+import Import
 
 headers :: Handler ()
 headers = do 

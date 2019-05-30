@@ -4,19 +4,18 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE QuasiQuotes #-}
-module Handler.HomeUser where
+module Handler.Obras where
 
 import Import
 import Database.Persist.Postgresql
-import Network.HTTP.Types
-import Funcs
+import Handler.Funcs
 
-optionsHomeUserR :: Handler ()
-optionsHomeUserR = headers
+optionsObrasR :: Handler ()
+optionsObrasR = headers
 
-getHomeUserR :: Handler TypedContent
-getHomeUserR = do 
-    obras <- runDB $ selectList [] [Asc ObrasNome]
+getObrasR :: Handler TypedContent
+getObrasR = do 
+    obras <- runDB $ selectList [] [Asc ObrasTitulo]
     sendStatusJSON ok200 (object ["resp" .= obras])
 
 

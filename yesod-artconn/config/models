@@ -3,13 +3,20 @@ Usuarios json
     email Text
     celular Text
     senha Text
+    deriving Eq
+    deriving Show
     
 Obras json
     titulo Text
+    generoId GenerosId
+    dia Day
+    usuarioId UsuariosId
+    deriving Show
+    deriving Eq
+Generos json
     genero Text
-    data Date
-    usuario UsuariosId
-   
+    deriving Eq
+    deriving Show
 
 
 

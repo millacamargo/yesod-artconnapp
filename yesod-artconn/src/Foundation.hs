@@ -30,6 +30,9 @@ instance YesodPersist App where
         master <- getYesod
         runSqlPool action $ appConnPool master
 
+-- UMA VEZ
+type Form a = Html -> MForm Handler (FormResult a, Widget)
+
 instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage
 
