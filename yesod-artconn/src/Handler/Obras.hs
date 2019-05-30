@@ -16,6 +16,6 @@ optionsObrasR = headers
 getObrasR :: Handler TypedContent
 getObrasR = do 
     obras <- runDB $ selectList [] [Asc ObrasTitulo]
-    sendStatusJSON ok200 (object ["resp" .= obras])
+    sendStatusJSON ok200 (object ["obras" .= obras])
 
 

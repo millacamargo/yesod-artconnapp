@@ -19,4 +19,4 @@ postUsuarioR :: Handler TypedContent
 postUsuarioR = do
     usuario <- requireJsonBody :: Handler Usuarios
     uid <- runDB $ insert usuario
-    sendStatusJSON created201 (object ["resp" .=uid])
+    sendStatusJSON created201 (object ["usuarios" .=uid])

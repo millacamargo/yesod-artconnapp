@@ -1,0 +1,50 @@
+ionic serve -p 8080 --dev-logger-port 8103
+
+BANCO
+
+Host
+    ec2-107-22-238-217.compute-1.amazonaws.com
+Database
+    damecodoiphpn5
+User
+    frhlioyfphdqbf
+Port
+    5432
+Password
+    3dcaa5b18d581185b02464980b19336547c712f0d7c9a695b6320abdd06ae4c7
+URI
+    postgres://frhlioyfphdqbf:3dcaa5b18d581185b02464980b19336547c712f0d7c9a695b6320abdd06ae4c7@ec2-107-22-238-217.compute-1.amazonaws.com:5432/damecodoiphpn5
+Heroku CLI
+    heroku pg:psql postgresql-adjacent-50561 --app webapp-artedb
+    
+    
+    
+colocar no bash
+
+TUDO NA MESMA LINHA
+
+psql -h ec2-107-22-238-217.compute-1.amazonaws.com -U frhlioyfphdqbf -d damecodoiphpn5
+     
+3dcaa5b18d581185b02464980b19336547c712f0d7c9a695b6320abdd06ae4c7
+
+
+var teste = 
+[
+"obra":{
+	"titulo": "xablau"  
+	"generoId": 1
+    
+	"data": 2019-05-29    
+	"usuarioId": 1
+},
+"genero":"xablau2"
+}
+]
+
+teste[0]["obra"]["titulo"]
+
+var teste = http
+
+combox
+<select-list
+*ng-for funcao(teste)>
