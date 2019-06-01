@@ -4,9 +4,10 @@
 /robots.txt RobotsR GET
  
 /obras ObrasR OPTIONS GET
-/cadastro UsuarioR OPTIONS POST
+/cadastro UsuarioR OPTIONS POST 
 /obra/#ObrasId ObraR OPTIONS GET PUT DELETE
 /obra CadastroObraR OPTIONS POST
 /arquivo/#ObrasId ArquivoR  OPTIONS GET POST
+
 
 

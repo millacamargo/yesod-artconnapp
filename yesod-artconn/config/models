@@ -3,6 +3,7 @@ Usuarios json
     email Text
     celular Text
     senha Text
+    UniqueEmailIndex email
     deriving Eq
     deriving Show
     
