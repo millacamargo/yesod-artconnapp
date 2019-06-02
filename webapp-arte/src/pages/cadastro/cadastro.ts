@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController  } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 
 @Component({
@@ -10,7 +10,7 @@ export class Cadastro {
   
   obra = { titulo: '', autor: '', dia: '', celular: ''};
 
-  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+  constructor(public navCtrl: NavController, public restProvider: RestProvider, public toastController: ToastController) {
 
   }
   
@@ -21,5 +21,13 @@ saveArt() {
   console.log(err); 
   }); 
 }
+
+async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Cadastro efetuado com sucesso!',
+      duration: 2000
+    });
+    toast.present();
+  }
 
 }

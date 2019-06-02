@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Login } from '../login/login';
+import { Cadastro } from '../cadastro/cadastro';
 
 @Component({
   selector: 'page-home',
@@ -11,8 +11,8 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
   
   }
-  goToLogin(){
-    this.navCtrl.setRoot(Login);
+  goToCadastro(){
+    this.navCtrl.setRoot(Cadastro);
   }
 
 }

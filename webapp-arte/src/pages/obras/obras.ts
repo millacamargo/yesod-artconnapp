@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Obras {
   
-  result:any= [];
   data: Observable<any>;
 
   constructor(public navCtrl: NavController, public http: HttpClient) {
@@ -18,10 +17,10 @@ export class Obras {
   }
   
   async getData() {
-    var url = 'https://app-arte-camilacamargo98.c9users.io/obra/1';
+    var url = 'https://app-arte-camilacamargo98.c9users.io/obras';
     this.data = this.http.get(url);
     this.data.subscribe(data =>{
-      this.result = data;
+      console.log(data);
     });
   }
  
