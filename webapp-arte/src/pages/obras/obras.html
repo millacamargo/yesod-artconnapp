@@ -23,14 +23,14 @@
 						</div>
     
     <div class="row">
-  <div class="col-sm-6" *ngFor="let obra of obras">
+  <div class="col-sm-6 mb50" *ngFor="let obra of obras">
 
       <div class="card text-center">
   <img class="card-img-top" src="..." alt="Card image cap">
   <div class="card-body">
       <h5 class="card-title">Título: {{obra.titulo}}</h5>
       <h6 class="card-text">Autor: {{obra.autor}}</h6>
-    <h6 class="card-text">Gênero: {{obra.autor}}</h6>
+    <h6 class="card-text mb25">Gênero: {{obra.autor}}</h6>
      <!--  <h6 class="card-text">Classificação: </h6>-->
       <p class="card-text">{{obra.descricao}}</p>
      <a href="https://api.whatsapp.com/send?phone={{obra.celular}}" target="_blank" class="btn btn-main btn-lg">Entre em Contato</a>
@@ -44,4 +44,17 @@
 </div>
 </div>
 </section>
+
+	<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						&copy; <a href="http://millacamargo.com" target="_blank">Camila Azevedo Camargo</a> 
+						
+						e <a href="https://www.linkedin.com/in/vasconcellosluis" target="_blank">Luis Felipe Santos Vasconcellos</a>, 2019.
+						
+					</div>
+				</div>
+			</div>
+		</footer>
 </ion-content>

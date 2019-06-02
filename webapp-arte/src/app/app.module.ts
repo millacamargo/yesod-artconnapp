@@ -8,7 +8,6 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Cadastro } from '../pages/cadastro/cadastro';
 import { Obras } from '../pages/obras/obras';
-import { Obra } from '../pages/obra/obra';
 import { HttpClientModule } from '@angular/common/http';
 import { RestProvider } from '../providers/rest/rest';
  
@@ -18,8 +17,7 @@ import { RestProvider } from '../providers/rest/rest';
     MyApp,
     HomePage,
     Cadastro,
-    Obras,
-    Obra
+    Obras
   ],
   imports: [
     BrowserModule,
@@ -31,8 +29,7 @@ import { RestProvider } from '../providers/rest/rest';
     MyApp,
     HomePage,
     Cadastro,
-    Obras,
-    Obra
+    Obras
   ],
   providers: [
     StatusBar,

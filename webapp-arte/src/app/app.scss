@@ -20,6 +20,7 @@
 @import "./assets/scss/brands.scss";
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 
 .activeHighlight {
     background-color: map-get($colors, light);
@@ -1860,6 +1861,10 @@ footer.site-footer {
 			color: $color_2;
 		}
 	}
+}
+.toolbar-title-md{
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 	a.social {
