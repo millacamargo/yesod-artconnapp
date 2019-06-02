@@ -24,11 +24,11 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<form class="contact-form" role="form">
-							<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título da Obra">
-							<input type="text" class="form-control" id="autor" name="autor" placeholder="Autor da Obra">
-							<input type="date" class="form-control" id="dtcriacao" name="dtcriacao" placeholder="Data de criação">
-							<input type="tel" class="form-control" id="tel" name="tel" placeholder="Telefone para contato">
+						<form class="contact-form" (ngsubmit)="saveArt()" role="form">
+							<input type="text" class="form-control" id="titulo" [(ngmodel)]="obra.titulo" name="titulo" placeholder="Título da Obra">
+							<input type="text" class="form-control" id="autor" [(ngmodel)]="obra.autor" name="autor" placeholder="Autor da Obra">
+							<input type="date" class="form-control" [(ngmodel)]="obra.dia" id="dtcriacao" name="dtcriacao" placeholder="Data de criação">
+							<input type="tel" class="form-control" [(ngmodel)]="obra.celular" id="tel" name="tel" placeholder="Telefone para contato">
 							<button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Cadastrar</button>
 						</form>
 						<div id="result-message" role="alert"></div>
