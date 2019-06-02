@@ -4,6 +4,7 @@ Obras json
     genero Text
     dia Day
     celular Text
+    descricao Text
     deriving Show
     deriving Eq
     
