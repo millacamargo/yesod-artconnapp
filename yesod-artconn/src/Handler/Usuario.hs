@@ -17,6 +17,7 @@ optionsUsuarioR = headers
 
 postUsuarioR :: Handler TypedContent
 postUsuarioR = do
+    headers
     usuario <- requireJsonBody :: Handler Usuarios
     uid <- runDB $ insert usuario
     sendStatusJSON created201 (object ["usuarios" .=uid])

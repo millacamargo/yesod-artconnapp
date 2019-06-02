@@ -27,6 +27,7 @@ formArquivo = renderBootstrap $ areq fileField
 
 getArquivoR :: ObrasId -> Handler Html
 getArquivoR oid = do 
+    headers
     (widget,enctype) <- generateFormPost formArquivo
     defaultLayout $ do
         addStylesheet $ StaticR css_bootstrap_css
@@ -37,6 +38,7 @@ getArquivoR oid = do
 
 postArquivoR :: ObrasId -> Handler Html 
 postArquivoR oid = do 
+    headers
     ((res,_),_) <- runFormPost formArquivo
     case res of 
         FormSuccess arq -> do 

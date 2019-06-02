@@ -10,6 +10,9 @@ import { Cadastro } from '../pages/cadastro/cadastro';
 import { Login } from '../pages/login/login';
 import { CadastroObra } from '../pages/cadastroObra/cadastroObra';
 import { Obras } from '../pages/obras/obras';
+import { Obra } from '../pages/obra/obra';
+import { HttpClientModule } from '@angular/common/http';
+ 
 
 @NgModule({
   declarations: [
@@ -18,10 +21,12 @@ import { Obras } from '../pages/obras/obras';
     Cadastro,
     Login,
     CadastroObra,
-    Obras
+    Obras,
+    Obra
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -31,7 +36,8 @@ import { Obras } from '../pages/obras/obras';
     Cadastro,
     Login,
     CadastroObra,
-    Obras
+    Obras,
+    Obra
   ],
   providers: [
     StatusBar,

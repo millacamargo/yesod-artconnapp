@@ -19,6 +19,7 @@ optionsCadastroObraR = headers
 
 postCadastroObraR :: Handler TypedContent
 postCadastroObraR = do
+    headers
     obra <- requireJsonBody :: Handler Obras
     oid <- runDB $ insert obra
     sendStatusJSON created201 (object ["resp" .= oid])
@@ -34,6 +35,7 @@ instance ToJSON ObraGenero where
 
 getObraR :: ObrasId -> Handler TypedContent
 getObraR oid = do 
+    headers
     obra <- runDB $ get404 oid
     -- entityVal entityKey
     --let obraId = fmap (obrasGeneroId.entityVal) obra
@@ -44,12 +46,14 @@ getObraR oid = do
     
 deleteObraR :: ObrasId -> Handler TypedContent
 deleteObraR oid = do 
+    headers
     _ <- runDB $ get404 oid
     runDB $ delete oid
     sendStatusJSON noContent204 (object [])
 
 putObraR :: ObrasId -> Handler TypedContent
 putObraR oid = do 
+    headers
     novaObra <- requireJsonBody :: Handler Obras
     runDB $ replace oid novaObra
     sendStatusJSON noContent204 (object [])
