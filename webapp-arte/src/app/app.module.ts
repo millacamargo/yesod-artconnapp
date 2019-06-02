@@ -7,8 +7,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Cadastro } from '../pages/cadastro/cadastro';
-import { Login } from '../pages/login/login';
-import { CadastroObra } from '../pages/cadastroObra/cadastroObra';
 import { Obras } from '../pages/obras/obras';
 import { Obra } from '../pages/obra/obra';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,8 +18,6 @@ import { RestProvider } from '../providers/rest/rest';
     MyApp,
     HomePage,
     Cadastro,
-    Login,
-    CadastroObra,
     Obras,
     Obra
   ],
@@ -35,8 +31,6 @@ import { RestProvider } from '../providers/rest/rest';
     MyApp,
     HomePage,
     Cadastro,
-    Login,
-    CadastroObra,
     Obras,
     Obra
   ],

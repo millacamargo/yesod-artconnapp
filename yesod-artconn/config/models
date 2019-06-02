@@ -1,19 +1,11 @@
-Usuarios json
-    nome Text
-    email Text
-    celular Text
-    senha Text
-    UniqueEmailIndex email
-    deriving Eq
-    deriving Show
-    
 Obras json
     titulo Text
-    generoId GenerosId
+    autor Text
     dia Day
-    usuarioId UsuariosId
+    celular Text
     deriving Show
     deriving Eq
+    
 Generos json
     genero Text
     deriving Eq

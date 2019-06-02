@@ -6,9 +6,12 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'cadastro.html'
 })
 export class Cadastro {
+  
 
   constructor(public navCtrl: NavController) {
 
   }
+  
+
 
 }
