@@ -8,7 +8,7 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class Cadastro {
   
-  obra = { titulo: '', autor: '', genero: '', dia: '', celular: ''};
+  obra = { titulo: '', autor: '', genero: '', dia: '', celular: '', descricao: ''};
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider, public toastController: ToastController) {
 

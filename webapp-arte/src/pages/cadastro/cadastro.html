@@ -25,13 +25,13 @@
 				<div class="row">
 					<div class="col-md-12">
 						<form class="contact-form" (ngSubmit)="saveArt()" role="form">
-							<ion-input type="text" class="form-control" id="titulo" [(ngModel)]="obra.titulo" name="titulo" placeholder="Título da Obra"></ion-input>
-							<ion-input type="text" class="form-control" id="autor" [(ngModel)]="obra.autor" name="autor" placeholder="Autor da Obra"></ion-input>
-							<ion-input type="text" class="form-control" id="genero" [(ngModel)]="obra.genero" name="genero" placeholder="Genero da obra: Literário, Teatro, Dança, etc."></ion-input>
-							<ion-input type="date" class="form-control" [(ngModel)]="obra.dia" id="dtcriacao" name="dtcriacao" placeholder="Data de criação"></ion-input>
-							<ion-input type="tel" class="form-control" [(ngModel)]="obra.celular" id="tel" name="tel" placeholder="Celular: +55DDDSeunumero"></ion-input>
-							<ion-textarea id="descricao" name="descricao" class="form-control" rows="3" [(ngModel)]="obra.descricao" placeholder="Digite uma descrição da sua obra"></ion-textarea>
-							<button class="btn btn-main btn-lg" (click)="presentToast()" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Cadastrar</button>
+							<input type="text" class="form-control" id="titulo" [(ngModel)]="obra.titulo" name="titulo" placeholder="Título da Obra">
+							<input type="text" class="form-control" id="autor" [(ngModel)]="obra.autor" name="autor" placeholder="Autor da Obra">
+							<input type="text" class="form-control" id="genero" [(ngModel)]="obra.genero" name="genero" placeholder="Genero da obra: Literário, Teatro, Dança, etc.">
+							<input type="date" class="form-control" [(ngModel)]="obra.dia" id="dtcriacao" name="dtcriacao" placeholder="Data de criação">
+							<input type="tel" class="form-control" [(ngModel)]="obra.celular" id="tel" name="tel" placeholder="Celular: 55DDDSeunumero">
+							<textarea id="descricao" name="descricao" class="form-control" rows="3" [(ngModel)]="obra.descricao" placeholder="Digite uma descrição da sua obra"></textarea>
+							<button class="btn btn-main btn-lg" (click)="presentToast(event)" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Cadastrar</button>
 						</form>
 						<div id="result-message" role="alert"></div>
 					</div>
