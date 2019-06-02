@@ -18,6 +18,8 @@
 @import "./assets/scss/fontawesome.scss";
 @import "./assets/scss/solid.scss";
 @import "./assets/scss/brands.scss";
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
 
 .activeHighlight {
     background-color: map-get($colors, light);
@@ -31,7 +33,7 @@
 		content: fa-content($fa-var-user);
 	}
 }
-page-home, cadastro, cadastroObra, login, obras {
+page-home, cadastro, obras {
 
 $color_1: #808080;
 $color_2: #FF7F50;
@@ -1399,9 +1401,9 @@ ul.styled-list.list-star {
 		&:before {
 			font-family: $font_family_2;
 			content: '\201C';
-			font-size: 40px;
+			font-size: 36px;
 			position: absolute;
-			bottom: 1%;
+			top: 68%;
 			left: 12%;
 			z-index: 99;
 		}
