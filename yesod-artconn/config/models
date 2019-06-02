@@ -1,13 +1,14 @@
 Obras json
     titulo Text
     autor Text
+    genero Text
     dia Day
     celular Text
     deriving Show
     deriving Eq
     
-Generos json
-    genero Text
+Classificacao json
+    classificacao Text
     deriving Eq
     deriving Show
 
