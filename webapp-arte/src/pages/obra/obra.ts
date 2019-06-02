@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 
 @Component({
   selector: 'obra',
@@ -8,8 +8,8 @@ import { NavController, NavParams } from 'ionic-angular';
 export class Obra {
   obra: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  this.obra = this.navParams.get('obra');
+  constructor(public navCtrl: NavController) {
+
     
   }
   

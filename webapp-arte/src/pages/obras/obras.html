@@ -23,37 +23,21 @@
 						</div>
     
     <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-6" *ngFor="let obra of obras">
 
-  <button ion-button (click)="getData()">
-    GET DATA
-  </button>
- 
       <div class="card text-center">
   <img class="card-img-top" src="..." alt="Card image cap">
   <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-     <a href="#" class="btn btn-primary">Entre em contato</a>
+      <h5 class="card-title">Título: {{obra.titulo}}</h5>
+    <p class="card-text">Autor: {{obra.autor}}</p>
+     <a href="{{obra.celular}}" target="_blank" class="btn btn-primary">Entre em Contato</a>
   </div>
   <div class="card-footer text-muted">
-    2 days ago
+   Data da criação: {{obra.dia | date: 'dd/MM/yyyy'}}
   </div>
 </div>
 </div>
-<div class="col-sm-6">
-      <div class="card text-center">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-     <a href="#" class="btn btn-primary">Entre em contato</a>
-  </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
-</div>
-</div>
+
 </div>
 </div>
 </section>

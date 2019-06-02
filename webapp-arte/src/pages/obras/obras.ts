@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Observable } from 'rxjs/Observable';
-import { HttpClient } from '@angular/common/http';
+import { RestProvider } from '../../providers/rest/rest';
 
 @Component({
   selector: 'obras',
@@ -9,18 +8,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Obras {
   
-  data: Observable<any>;
+  obras: any = [];
 
-  constructor(public navCtrl: NavController, public http: HttpClient) {
-  
+  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+   this.getArt();
     
   }
   
-  async getData() {
-    var url = 'https://app-arte-camilacamargo98.c9users.io/obras';
-    this.data = this.http.get(url);
-    this.data.subscribe(data =>{
-      console.log(data);
+  getArt() {
+    this.restProvider.getArt()
+    .then(data => {
+      this.obras = data.obras;
+      console.log(this.obras);
     });
   }
  

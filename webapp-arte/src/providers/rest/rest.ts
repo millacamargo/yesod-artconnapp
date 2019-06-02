@@ -16,6 +16,16 @@ apiUrl = 'https://app-arte-camilacamargo98.c9users.io';
     console.log('Hello RestServiceProvider Provider');
   }
   
+  getArt() {
+  return new Promise(resolve => {
+    this.http.get(this.apiUrl+'/obras').subscribe(data => {
+      resolve(data);
+    }, err => {
+      console.log(err);
+    });
+  });
+}
+  
 saveArt(data) {
   return new Promise((resolve, reject) => {
   this.http.post(this.apiUrl+'/obra', JSON.stringify(data)).subscribe(res => {
