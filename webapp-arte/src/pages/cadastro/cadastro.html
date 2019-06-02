@@ -24,11 +24,11 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<form class="contact-form" role="form">
-							<input type="text" class="form-control" id="fname" name="fname" placeholder="Nome completo">
-							<input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
-							<input type="tel" class="form-control" id="celular" name="celular" placeholder="Celular: (xx)xxxxx-xxxx">
-							<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+						<form class="contact-form" role="form" (ngSubmit)="saveUser()">
+							<input type="text" class="form-control" [(ngModel)]="user.nome" id="fname" name="fname" placeholder="Nome completo">
+							<input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" placeholder="E-mail">
+							<input type="tel" class="form-control" id="celular" [(ngModel)]="user.celular" name="celular" placeholder="Celular: (xx)xxxxx-xxxx">
+							<input type="password" class="form-control" id="senha" [(ngModel)]="user.senha" name="senha" placeholder="Senha">
 							<button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Cadastrar</button>
 						</form>
 						<div id="result-message" role="alert"></div>

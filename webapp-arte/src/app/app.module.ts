@@ -12,6 +12,7 @@ import { CadastroObra } from '../pages/cadastroObra/cadastroObra';
 import { Obras } from '../pages/obras/obras';
 import { Obra } from '../pages/obra/obra';
 import { HttpClientModule } from '@angular/common/http';
+import { RestProvider } from '../providers/rest/rest';
  
 
 @NgModule({
@@ -42,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RestProvider
   ]
 })
 export class AppModule {}
