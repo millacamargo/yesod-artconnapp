@@ -20,6 +20,14 @@ saveArt() {
   }, (err) => { 
  console.log(err); 
  }); 
+ 
+ //resetar o formulário ao enviar
+    this.obra.titulo =null;
+    this.obra.autor =null;
+    this.obra.genero =null;
+    this.obra.dia =null;
+    this.obra.celular =null;
+    this.obra.descricao =null;
 }
 
 
