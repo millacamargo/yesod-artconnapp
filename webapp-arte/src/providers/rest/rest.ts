@@ -12,17 +12,17 @@ export class RestProvider {
 
 apiUrl = 'https://app-arte-camilacamargo98.c9users.io';
 
+
   constructor(public http: HttpClient) {
-    console.log('Hello RestServiceProvider Provider');
   }
   
   getArt() {
-  return new Promise(resolve => {
-    this.http.get(this.apiUrl+'/obras').subscribe(data => {
-      resolve(data);
-    }, err => {
-      console.log(err);
-    });
+return new Promise(resolve => {
+  this.http.get(this.apiUrl+'/obras').subscribe(data => {
+  resolve(data);
+  }, err => {
+     console.log(err);
+   });
   });
 }
   
@@ -30,10 +30,24 @@ saveArt(data) {
   return new Promise((resolve, reject) => {
   this.http.post(this.apiUrl+'/obra', JSON.stringify(data)).subscribe(res => {
   resolve(res);
-  }, (err) => {
-  reject(err);
+ }, (err) => {
+ reject(err);
   });
+  });
+}
+ 
+deleteArt(obra) {
+return new Promise(resolve => {
+  this.http.delete(this.apiUrl+'/obra/'+ obra.id).subscribe(data => {
+  resolve(data);
+  }, err => {
+     console.log(err);
+   });
   });
 }
 
 }
+
+
+
+

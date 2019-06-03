@@ -8,19 +8,20 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class Cadastro {
   
-  obra = { titulo: '', autor: '', genero: '', dia: '', celular: '', descricao: ''};
+ obra = { titulo: '', autor: '', genero: '', dia: '', celular: '', descricao: ''};
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider, public toastController: ToastController) {
 
   }
   
 saveArt() { 
-  this.restProvider.saveArt(this.obra).then((result) => { 
+ this.restProvider.saveArt(this.obra).then((result) => { 
   console.log(result); 
   }, (err) => { 
-  console.log(err); 
-  }); 
+ console.log(err); 
+ }); 
 }
+
 
 async presentToast() {
     const toast = await this.toastController.create({

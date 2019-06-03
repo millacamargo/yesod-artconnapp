@@ -30,10 +30,11 @@
   <div class="card-body">
       <h5 class="card-title">Título: {{obra.titulo}}</h5>
       <h6 class="card-text">Autor: {{obra.autor}}</h6>
-    <h6 class="card-text mb25">Gênero: {{obra.autor}}</h6>
+    <h6 class="card-text mb25">Gênero: {{obra.genero}}</h6>
      <!--  <h6 class="card-text">Classificação: </h6>-->
       <p class="card-text">{{obra.descricao}}</p>
      <a href="https://api.whatsapp.com/send?phone={{obra.celular}}" target="_blank" class="btn btn-main btn-lg">Entre em Contato</a>
+    <button (click)="deleteArt(obra)" type="button" class="btn btn-main btn-lg">Delete</button>
   </div>
   <div class="card-footer text-muted">
    Data da obra: {{obra.dia | date: 'dd/MM/yyyy'}}
