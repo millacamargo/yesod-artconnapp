@@ -15,10 +15,18 @@ export class Cadastro {
   }
   
 saveArt() { 
- this.restProvider.saveArt(this.obra).then((result) => { 
-  console.log(result); 
-  }, (err) => { 
- console.log(err); 
+ this.restProvider.saveArt(this.obra).then(async (result) => { 
+   const toast = await this.toastController.create({
+      message: 'Cadastro efetuado com sucesso!',
+      duration: 2000
+    });
+    toast.present();
+  }, async (err) => { 
+ const toast = await this.toastController.create({
+      message: 'Algo deu errado',
+      duration: 2000
+    });
+    toast.present();
  }); 
  
  //resetar o formulário ao enviar
@@ -29,14 +37,5 @@ saveArt() {
     this.obra.celular =null;
     this.obra.descricao =null;
 }
-
-
-async presentToast() {
-    const toast = await this.toastController.create({
-      message: 'Cadastro efetuado com sucesso!',
-      duration: 2000
-    });
-    toast.present();
-  }
 
 }
