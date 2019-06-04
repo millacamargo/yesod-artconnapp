@@ -15,20 +15,19 @@ export class Obra {
    this.obra = this.navParams.get('obra');
   }
   
+  
+  
    updateArt(obra) { 
-     this.restProvider.updateArt(this.obra).then( async (result) => { 
-       const toast = await this.toastController.create({
-          message: 'Edição feita com sucesso!',
-          duration: 2000
-        });
-        toast.present();
-      }, async (err) => { 
-     const toast = await this.toastController.create({
-          message: 'Algo deu errado',
-          duration: 2000
-        });
-        toast.present();
+     this.restProvider.updateArt(this.obra).then( (result) => { 
+      console.log(result);
+      }, (err) => { 
+     console.log(err);
      }); 
+      const toast = this.toastController.create({
+          message: 'Alteração feita com sucesso!',
+          duration: 2000
+        });
+        toast.present();
 }
-    
+   
   }

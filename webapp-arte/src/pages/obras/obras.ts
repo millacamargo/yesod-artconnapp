@@ -38,9 +38,10 @@ deleteArt(obra){
                 text: 'Sim',
                 handler: () => {
                    this.restProvider.deleteArt(obra);
-                   setInterval(()=> {
-                     this.getArt(); },100); 
+                   setTimeout(() => {
+                    this.getArt();}, 500); 
                 }
+                
             }
         ]
     });
