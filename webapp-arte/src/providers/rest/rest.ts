@@ -46,6 +46,16 @@ return new Promise(resolve => {
   });
 }
 
+updateArt(obra) {
+  return new Promise((resolve, reject) => {
+  this.http.put(this.apiUrl+'/obra/'+ obra.id, JSON.stringify(obra)).subscribe(res => {
+  resolve(res);
+ }, (err) => {
+ reject(err);
+  });
+  });
+}
+
 }
 
 

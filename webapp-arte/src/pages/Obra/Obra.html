@@ -17,15 +17,16 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title st-center">
-							<h3>Cadastre sua Obra</h3>
-							<p>Comece a divulgar seus projetos artísticos agora mesmo!</p>
+							<h3>Edite sua Obra</h3>
+							<p>Teve um problema no cadastro? Tudo bem, você pode ajustar!</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12">
-						<form class="contact-form" (ngSubmit)="saveArt()" role="form">
-							<input type="text" class="form-control" id="titulo" [(ngModel)]="obra.titulo" name="titulo" placeholder="Título da Obra" required>
+					<div class="col-md-12" *ngIf="obra">
+					    
+						<form class="contact-form" (ngSubmit)="updateArt(obra)" role="form">
+							<input type="text" class="form-control" id="titulo" [(ngModel)]="obra.titulo"  name="titulo" placeholder="Título da Obra" required>
 							<input type="text" class="form-control" id="autor" [(ngModel)]="obra.autor" name="autor" placeholder="Autor da Obra" required>
 							<input type="text" class="form-control" id="genero" [(ngModel)]="obra.genero" name="genero" placeholder="Genero da obra: Literário, Teatro, Dança, etc." required>
 							<input type="date" class="form-control" [(ngModel)]="obra.dia" id="dtcriacao" name="dtcriacao" placeholder="Data da obra" required>
@@ -40,7 +41,8 @@
 							<option value="">18 anos</option>
 							</select>-->
 							<textarea id="descricao" name="descricao" class="form-control" rows="3" [(ngModel)]="obra.descricao" placeholder="Digite uma descrição da sua obra" required></textarea>
-							<button class="btn btn-main btn-lg"  type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Cadastrar</button>
+							<button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Alterar</button>
+						
 						</form>
 						<div id="result-message" role="alert"></div>
 					</div>

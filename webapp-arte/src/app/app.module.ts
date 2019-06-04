@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -10,14 +10,15 @@ import { Cadastro } from '../pages/cadastro/cadastro';
 import { Obras } from '../pages/obras/obras';
 import { HttpClientModule } from '@angular/common/http';
 import { RestProvider } from '../providers/rest/rest';
- 
+import { Obra } from '../pages/Obra/Obra';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     Cadastro,
-    Obras
+    Obras, 
+    Obra
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,8 @@ import { RestProvider } from '../providers/rest/rest';
     MyApp,
     HomePage,
     Cadastro,
-    Obras
+    Obras,
+    Obra
   ],
   providers: [
     StatusBar,

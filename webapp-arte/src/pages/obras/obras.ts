@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, NavParams  } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import {Obra} from '../Obra/Obra';
 
 @Component({
   selector: 'obras',
@@ -10,7 +11,7 @@ export class Obras {
   
   obras: any = [];
  
-  constructor(public navCtrl: NavController, public restProvider: RestProvider, private alert: AlertController) {
+  constructor(public navCtrl: NavController, public restProvider: RestProvider, private alert: AlertController,public navParams: NavParams) {
    this.getArt();
   }
   
@@ -46,7 +47,9 @@ deleteArt(obra){
     alert.present();
   }
  
-
+editArt(obra) {
+    this.navCtrl.push(Obra, {obra: obra});
+  }
 
 }
 

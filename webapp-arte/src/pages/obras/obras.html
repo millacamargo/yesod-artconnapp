@@ -34,7 +34,8 @@
      <!--  <h6 class="card-text">Classificação: </h6>-->
       <p class="card-text">{{obra.descricao}}</p>
      <a href="https://api.whatsapp.com/send?phone={{obra.celular}}" target="_blank" class="btn btn-main btn-lg">Entre em Contato</a>
-    <button (click)="deleteArt(obra)" type="button" class="btn btn-main btn-lg">Delete</button>
+    <button (click)="deleteArt(obra)" type="button" class="btn btn-main btn-lg"><i class="fas fa-trash-alt"></i></button>
+    <button (click)="editArt(obra)" type="button" class="btn btn-main btn-lg"><i class="fas fa-edit"></i></button>
   </div>
   <div class="card-footer text-muted">
    Data da obra: {{obra.dia | date: 'dd/MM/yyyy'}}
