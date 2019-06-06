@@ -8,9 +8,3 @@ Obras json
     imagem Text
     deriving Show
     deriving Eq
-    
-
-
-
-
-    

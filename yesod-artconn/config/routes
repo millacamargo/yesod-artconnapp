@@ -6,6 +6,3 @@
 /obras ObrasR OPTIONS GET
 /obra/#ObrasId ObraR OPTIONS GET PUT DELETE
 /obra CadastroObraR OPTIONS POST
-
-
-

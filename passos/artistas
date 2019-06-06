@@ -1,2 +1,26 @@
-imagem: 
-https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80
+Obra pra inserir: 
+La Fiesta
+Zé Fernando
+Dança Folclórica
+5513981969531
+https://images.unsplash.com/photo-1504609813442-a8924e83f76e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80
+Uma obra sobre a importância do encontro humano com tradições antigas na história de diversos povos.
+
+
+explicações
+
+Toda vez que for criar um handler precisa importar ele no Application.hs 
+
+Options (routes) é um tipo de chamada http que permite as requisições no front. 
+Está no Funcs.hs (ver no google)
+
+Models declara a tabela e no nosso caso ela está declarada em json pois estamos 
+fazendo requisições rest e pedindo pra devolver um json no front
+Deriving show (mostrar) e eq (igual) estão porque foram transformados em um array de json
+
+OPTIONS SAO PERMISSOES DE ROTAS(http/url) POR ISSO NOS ARQUIVOS HS SUAS FUNCOES SAO POR NOME DE FUNCAOR E NAO POR CADA FUNCAO DE VERBO 
+NO ARQUIVO. As funcoesR que compartilahm sua rota em routes ObraR, etc. As options  CadastroObraR dao permissoes do usuraio
+de executar suas requisições no front.
+Se nao chamadas como headers nas funcoes, o acesso é bloqueado.
+
+

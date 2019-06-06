@@ -8,7 +8,7 @@ import {Obra} from '../Obra/Obra';
   templateUrl: 'obras.html',
 })
 export class Obras {
-  
+    
   obras: any = [];
  
   constructor(public navCtrl: NavController, public restProvider: RestProvider, private alert: AlertController,public navParams: NavParams) {
