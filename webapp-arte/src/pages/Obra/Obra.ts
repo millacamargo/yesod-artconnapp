@@ -7,9 +7,8 @@ import { RestProvider } from '../../providers/rest/rest';
   templateUrl: 'Obra.html',
 })
 export class Obra {
-    obra: any;
     
-    obra = { titulo: '', autor: '', genero: '', dia: '', celular: '', descricao: ''};
+    obra = { titulo: '', autor: '', genero: '', dia: '', celular: '', descricao: '', imagem: ''};
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider,public toastController: ToastController) {
    this.obra = this.navParams.get('obra');

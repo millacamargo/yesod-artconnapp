@@ -31,15 +31,7 @@
 							<input type="text" class="form-control" id="genero" [(ngModel)]="obra.genero" name="genero" placeholder="Genero da obra: Literário, Teatro, Dança, etc." required>
 							<input type="date" class="form-control" [(ngModel)]="obra.dia" id="dtcriacao" name="dtcriacao" placeholder="Data da obra" required>
 							<input type="tel" class="form-control" [(ngModel)]="obra.celular" id="tel" name="tel" placeholder="Whatsapp: 55DDDSeunumero" required>
-							<!-- <select class="form-control form-control-lg" required>
-							<option selected>Classificação Indicativa</option>
-							<option value="">Livre</option>
-							<option value="">10 anos</option>
-							<option value="">12 anos</option>
-							<option value="">14 anos</option>
-							<option value="">16 anos</option>
-							<option value="">18 anos</option>
-							</select>-->
+						    <input type="url" class="form-control" [(ngModel)]="obra.imagem" id="url" name="url" placeholder="Insira a url da imagem (Drive, Dropbox, etc)" required>
 							<textarea id="descricao" name="descricao" class="form-control" rows="3" [(ngModel)]="obra.descricao" placeholder="Digite uma descrição da sua obra" required></textarea>
 							<button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Alterar</button>
 						

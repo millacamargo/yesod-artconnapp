@@ -8,7 +8,7 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class Cadastro {
   
- obra = { titulo: '', autor: '', genero: '', dia: '', celular: '', descricao: ''};
+ obra = { titulo: '', autor: '', genero: '', dia: '', celular: '', descricao: '', imagem: ''};
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider, public toastController: ToastController) {
 
@@ -36,6 +36,7 @@ saveArt() {
     this.obra.dia =null;
     this.obra.celular =null;
     this.obra.descricao =null;
+    this.obra.imagem =null;
 }
 
 }

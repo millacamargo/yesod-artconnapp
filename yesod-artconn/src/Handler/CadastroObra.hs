@@ -24,23 +24,10 @@ postCadastroObraR = do
     oid <- runDB $ insert obra
     sendStatusJSON created201 (object ["obra" .= oid])
 
---data ObraGenero = ObraGenero {obra :: Obras, genero :: Generos} deriving Show
-
---instance ToJSON ObraGenero where
-  --  toJSON ObraGenero {..} = object
-    --    [ "obra" .= obra
-      --  , "obra" .= genero
-      --  ]
--- (object ["obra" .= obra, genero])
-
 getObraR :: ObrasId -> Handler TypedContent
 getObraR oid = do 
     headers
     obra <- runDB $ get404 oid
-    -- entityVal entityKey
-    --let obraId = fmap (obrasGeneroId.entityVal) obra
-    --genero <- runDB $ get404 obraId
-    -- let obraGenero = ObraGenero obra genero
     putStrLn $ (pack.show) obra
     sendStatusJSON ok200 $ obra
     

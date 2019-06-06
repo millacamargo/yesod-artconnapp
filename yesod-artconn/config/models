@@ -5,13 +5,10 @@ Obras json
     dia Day
     celular Text
     descricao Text
+    imagem Text
     deriving Show
     deriving Eq
     
-Classificacao json
-    classificacao Text
-    deriving Eq
-    deriving Show
 
 
 
